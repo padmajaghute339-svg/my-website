@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"href="choco.css">
+<title>Little Bite Choco</title>
+<p> 💖Made to melt your heart 💖</p>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+   
+}
+/* Header */
+header {
+    background: linear-gradient(to right, #4b2e2e, #8b5e3c);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+
+/* Products */
+.container {
+    padding: 30px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #6b4226;
+    font-weight: bold;
+}
+
+/* Button */
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #6b4226;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #4b2e2e;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍫 Little Bite Choco 🍫</h1>
+    <p>Homemade Chocolates made with love 💖</p>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+
+    <div class="grid">
+        <!--chota packate choclate-->
+         <div class="card">
+            <img src="20rs pack.jpg.jpeg">
+            <h3>chota packet bada dhamaka</h3>
+            <p class="price">₹20</p>
+            <button onclick="order('chota packet bada dhamaka ₹120')">Order</button>
+        </div>
+        <!-- Dry Fruits Chocolate -->
+        <div class="card">
+            <img src="choclatebar.jpg.jpeg">
+            <h4>Dry Fruits Chocolate Bar</h4>
+            <p class="price">₹120</p>
+            <button onclick="order('Dry Fruits Chocolate Bar ₹120')">Order</button>
+        </div>
+
+        <!-- Customized Chocolate -->
+        <div class="card">
+            <img src="choco2.jpg.jpeg">
+            <h5>Customized Chocolate Bar</h5>
+            <p class="price">₹200</p>
+            <button onclick="order('Customized Chocolate Bar ₹200')">Order</button>
+        </div>
+
+        <!-- Simple Chocos -->
+        <div class="card">
+            <img src="heart.jpg.jpeg">
+            <h6>Lovely heart like you</h6>
+            <p class="price">₹20</p>
+            <button onclick="order('lovely heart like you ₹20')">Order</button>
+        </div>
+        <!--60rs pack-->
+        <div class="card">
+            <img src="60rspack.jpg.jpeg">
+            <h7>Treasure pack</h7>
+            <p class="price">₹60</p>
+            <button onclick="order('Treasure pack ₹60')">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>📞 8149841443 | CHH. SAMBHAJINAGAR
+    </p>
+</footer>
+
+<script>
+function order(product){
+    let phone = "8149841443"; // PUT YOUR NUMBER
+    let message = "Hello, I want to order: " + product;
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
